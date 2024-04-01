@@ -1,7 +1,7 @@
 //to display all the tasks
 import React from "react";
 
-const Tasks = ({ tasks, setTasks, setEditTodo }) => {
+const TaskList = ({ tasks, setTasks, setEditTodo }) => {
 
     //to toggle the completion status of task
     const handleComplete = (todo) => {
@@ -63,4 +63,4 @@ const Tasks = ({ tasks, setTasks, setEditTodo }) => {
   );
 };
 
-export default Tasks;
+export default TaskList;

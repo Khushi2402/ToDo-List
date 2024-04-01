@@ -6,7 +6,7 @@ import React, {useEffect} from "react";
 import {v4 as uuidV4} from "uuid";
 
 //initiallizing input state variable using useState hook
-const Input = ({ input, setInput, tasks, setTasks, editTodo, setEditTodo }) => {
+const TaskInput = ({ input, setInput, tasks, setTasks, editTodo, setEditTodo }) => {
 
   //to update input state based on user input
     const updateTodo = (title, id, completed) => {
@@ -63,4 +63,4 @@ const Input = ({ input, setInput, tasks, setTasks, editTodo, setEditTodo }) => {
   );
 };
 
-export default Input;
+export default TaskInput;

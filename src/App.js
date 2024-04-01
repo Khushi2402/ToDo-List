@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useeffect } from "react";
 import "./App.css";
-import Input from "./components/Input";
-import Tasks from "./components/Tasks";
+import TaskInput from "./components/TaskInput";
+import TaskList from "./components/TaskList";
 
 const App = () => {
   const initialState = JSON.parse(localStorage.getItem("todo")) || [];
@@ -17,14 +17,14 @@ const App = () => {
   useEffect(() => {
     localStorage.setItem("tasks", JSON.stringify(tasks));
   }, [tasks]);
-  
+
   return (
     <div className="screen">
       <div className="card">
         <h1 className="heading">ToDo List</h1>
         <div className="main-card">
           <div className="form">
-            <Input
+            <TaskInput
               input={input}
               setInput={setInput}
               tasks={tasks}
@@ -34,7 +34,7 @@ const App = () => {
             />
           </div>
           <div className="tasks">
-            <Tasks
+            <TaskList
               tasks={tasks}
               setTasks={setTasks}
               setEditTodo={setEditTodo}
