@@ -1,11 +1,16 @@
-import './App.css';
+import "./App.css";
+import Header from "./components/Header";
 
-function App() {
+const App = () => {
   return (
-    <div>
-      App
+    <div className="screen">
+      <div className="card">
+        <div>
+          <Header />
+        </div>
+      </div>
     </div>
   );
-}
+};
 
 export default App;

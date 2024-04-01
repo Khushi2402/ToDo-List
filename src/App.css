@@ -3,8 +3,8 @@
   padding: 0;
 }
 
-.container {
-  background: linear-gradient(to right bottom, #e1b382, #c89666);
+.screen {
+  background-color: #c5f5ff;
   width: 100%;
   min-height: 100vh;
   display: flex;
@@ -12,4 +12,18 @@
   align-items: center;
 }
 
-.app-wrapper {}
+.card {
+  background-color: #006377;
+  min-width: 50vh;
+  min-height: 60vh;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.heading{
+  color: #fff;
+  text-align: center;
+  margin: 10px 0;
+  font-size: xx-large;
+}
