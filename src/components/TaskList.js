@@ -43,6 +43,7 @@ const TaskList = ({ tasks, setTasks, setEditTodo }) => {
             className={`task ${todo.completed ? "complete" : ""}`}
             onChange={(event) => event.preventDefault()}
           />
+          
           <div>
             <button
               className="edit-task task-button"

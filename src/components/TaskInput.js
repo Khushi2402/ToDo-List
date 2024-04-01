@@ -17,6 +17,7 @@ const TaskInput = ({ input, setInput, tasks, setTasks, editTodo, setEditTodo }) 
         setEditTodo("");
     }
 
+    //to update the input state variable based on user input
     useEffect(() => {
         if(editTodo) {
             setInput(editTodo.title);
@@ -55,6 +56,7 @@ const TaskInput = ({ input, setInput, tasks, setTasks, editTodo, setEditTodo }) 
           required
           onChange={onInputChange}
         />
+        {/* Add task button */}
         <button className="add-task" type="submit">
           {editTodo ? "OK" : "Add Task" }
         </button>

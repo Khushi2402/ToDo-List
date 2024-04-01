@@ -5,13 +5,16 @@ import TaskList from "./components/TaskList";
 
 const App = () => {
 
+  //to get data from local storage
   const initialState = JSON.parse(localStorage.getItem("tasks")) || [];
+
   // to keep track of what task the user enters
   const [input, setInput] = useState("");
 
   // to keep track of all the tasks
   const [tasks, setTasks] = useState(initialState);
 
+  // to keep track of editable tasks
   const [editTodo, setEditTodo] = useState(null);
 
   //to update local storage
