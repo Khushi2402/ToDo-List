@@ -3,6 +3,7 @@ import React from "react";
 
 const Tasks = ({ tasks, setTasks, setEditTodo }) => {
 
+    //to toggle the completion status of task
     const handleComplete = (todo) => {
         setTasks(
             tasks.map((item) => {
@@ -14,11 +15,13 @@ const Tasks = ({ tasks, setTasks, setEditTodo }) => {
         );
     };
 
+    //to set editTodo state variable to task, when button is clicked
     const handleEdit = ({id}) => {
         const findTodo = tasks.find((todo) => todo.id === id);
         setEditTodo(findTodo);
     }
 
+    //to remove task from tasks array
     const handleDelete = ({id}) => {
         setTasks(tasks.filter((todo) => todo.id !== id));
     };

@@ -5,8 +5,10 @@ import React, {useEffect} from "react";
 // to give unique ids to each task
 import {v4 as uuidV4} from "uuid";
 
+//initiallizing input state variable using useState hook
 const Input = ({ input, setInput, tasks, setTasks, editTodo, setEditTodo }) => {
 
+  //to update input state based on user input
     const updateTodo = (title, id, completed) => {
         const newTodo = tasks.map((todo) => 
             todo.id === id ? {title, id, completed} : todo
@@ -27,15 +29,18 @@ const Input = ({ input, setInput, tasks, setTasks, editTodo, setEditTodo }) => {
         setInput(event.target.value);
     };
 
+    //to handle form submission 
     const onFormSubmit = (event) => {
-        event.preventDefault();
-        if(!editTodo) {
-            setTasks([...tasks, { id: uuidV4(), title: input, completed: false }]);
+      event.preventDefault();
+      //if no editable tasks then new task is added to the array with new id
+      if (!editTodo) {
+        setTasks([...tasks, { id: uuidV4(), title: input, completed: false }]);
         setInput("");
-        } else {
-            updateTodo(input, editTodo.id, editTodo.completed);
-        }
-        
+      }
+      //if editable task is present, then update the task
+      else {
+        updateTodo(input, editTodo.id, editTodo.completed);
+      }
     }
   return (
     <div>

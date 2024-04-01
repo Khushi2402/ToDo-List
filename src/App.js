@@ -13,9 +13,11 @@ const App = () => {
 
   const [editTodo, setEditTodo] = useState(null);
 
+  //to update local storage
   useEffect(() => {
     localStorage.setItem("tasks", JSON.stringify(tasks));
   }, [tasks]);
+  
   return (
     <div className="screen">
       <div className="card">
