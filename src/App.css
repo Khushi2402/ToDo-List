@@ -28,6 +28,7 @@
 
 .main-card {
   display: flex;
+  height: 500px;
 }
 
 .form {
@@ -40,6 +41,7 @@
 .tasks {
   padding: 30px;
   width: 50%;
+  overflow-y: auto;
 }
 
 .heading{
