@@ -4,7 +4,8 @@ import TaskInput from "./components/TaskInput";
 import TaskList from "./components/TaskList";
 
 const App = () => {
-  const initialState = JSON.parse(localStorage.getItem("todo")) || [];
+
+  const initialState = JSON.parse(localStorage.getItem("tasks")) || [];
   // to keep track of what task the user enters
   const [input, setInput] = useState("");
 
