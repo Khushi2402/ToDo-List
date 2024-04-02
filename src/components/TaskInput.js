@@ -5,7 +5,7 @@ import React, {useEffect} from "react";
 // to give unique ids to each task
 import {v4 as uuidV4} from "uuid";
 
-//initiallizing input state variable using useState hook
+//initializing input state variable using useState hook
 const TaskInput = ({ input, setInput, tasks, setTasks, editTodo, setEditTodo }) => {
 
   //to update input state based on user input
